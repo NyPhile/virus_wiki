@@ -16,35 +16,36 @@ body{
 .nav{
 	height: 44px;
 	background: #2994e2;
+	position: fixed;left: 0;right: 0;top: 0;
 	.search{
 		float: left;
 		width: 44px;height: 44px;
-		background: url(../images/sprite.png)  no-repeat 12px 12px;
+		background: url(res/sprite.png)  no-repeat 12px -27px;
 		background-size: 320px 320px;
 	}
 	.menu{
 		float: right;
 		width: 44px;height: 44px;
-		background: url(../images/sprite.png) no-repeat -24px 12px;
+		background: url(res/sprite.png) no-repeat -24px -28px;
 		background-size: 320px 320px;
 	}
 	.d_menu{
 		float: right;
 		width: 44px;height: 44px;
-		background: url(../images/sprite.png) no-repeat -24px -27px;
+		background: url(res/sprite.png) no-repeat -24px -27px;
 		background-size: 320px 320px;
 	}
 	.back{
 		float: left;
 		width: 44px;height: 44px;padding-left: 24px;
-		background: url(../images/sprite.png) no-repeat -92px 12px;background-size: 320px 320px;
+		background: url(res/sprite.png) no-repeat -92px 12px;background-size: 320px 320px;
 		font:16px/44px @yh;color: #fff;
 		&:hover{color:#fff;}
 	}
 	.d_search{
 		float: right;
 		width: 44px;height: 44px;
-		background: url(../images/sprite.png) no-repeat 12px -27px;
+		background: url(res/sprite.png) no-repeat 12px -27px;
 		background-size: 320px 320px;
 	}
 	.title{
@@ -52,18 +53,18 @@ body{
 	}
 }
 .cnt{
-	padding: 0 0 0 12px;
+	padding-top: 44px;
 	li{
-		border-bottom: 2px solid #dedfe1;
+		border-bottom: 2px solid #dedfe1;padding: 0 0 0 12px;
 	}
 	.ttl{
 		position: relative;
 		height: 42px;padding-left: 32px;
 		i{
 			display: block;
-			position: absolute;left: 10px;top: 17px;
+			position: absolute;left: 6px;top: 17px;
 			width: 11px;height: 8px;
-			background: url(../images/sprite.png) no-repeat -74px -9px;background-size: 320px 320px;
+			background: url(res/sprite.png) no-repeat -74px -9px;background-size: 320px 320px;
 			-webkit-transform:rotate(-90deg);
 			transform:rotate(-90deg);
 			-webkit-transition:0.3s all;
@@ -81,7 +82,7 @@ body{
 		height: 0;overflow: hidden;
 		.line{
 			display: block;
-			padding:4px 0 4px 32px;
+			padding:4px 0 4px 0px;margin-left: 32px;
 			border-bottom: 1px solid #dedfe1;
 			h3{
 				font:16px/20px @yh;color: #000;
@@ -99,7 +100,7 @@ body{
 }
 /*detail*/
 .detail_wrap{
-	width: 100%;
+	width: 100%;padding-top: 44px;
 	.detail_title{
 		background: #2994e2;
 		padding-top: 12px;
@@ -144,5 +145,74 @@ body{
 			padding: 8px 12px;
 			font:14px/24px @yh;color: #000;
 		}
+	}
+}
+/*search page*/
+.top{
+	height: 44px-7;padding: 7px 50px 0 12px;
+	background: #f2f2f2;
+	border-bottom: 1px solid #a9a9a9;
+	.box{
+		height: 30px;padding-left: 30px;
+		background: #e4e4e4;border-radius: 15px;
+		.search_btn{
+			display: block;float: left;
+			width: 30px;height: 30px;margin-left: -30px;
+			background: url(res/sprite.png) no-repeat 9px 7px;background-size: 240px 240px;
+			opacity: .4;
+		}
+		.ui-input-text{
+			border: 0;box-shadow: none;text-shadow: 0 0 0 #fff;background: none;float: left;width: 100%;
+			padding: 0;margin: 0;
+		}
+		.input{
+			font:13px/30px @yh;padding: 0;margin: 0;
+			float: left;width: 100%;color: #a7a7a7;
+		}
+	}
+	.cancel{
+		float: right;
+		width: 48px;margin-right: -50px;
+		font: 13px/30px @yh;text-align: center;color: #444;text-decoration: none;
+		&:hover{color:#444;}
+	}
+}
+.search_r{
+	h2{
+		padding: 7px 15px 0;
+		font:13px/30px @yh;color: #6c6c6c;
+	}
+	.type{
+		padding-left: 15px;overflow: hidden;
+		.item{
+			float: left;padding: 0 20px;margin: 0 6px 10px 0;
+			font:13px/32px @yh;color: #444;
+			background: #fff;
+			white-space: nowrap;
+		}
+	}
+}
+/*filter*/
+.update_wrap{
+	display: none;
+	width: 100%;height: 100%;position: fixed;top: 0;left: 0;right: 0;bottom: 0;
+	background: rgba(0,0,0,0.4);
+	.filter{
+		position: absolute;bottom: 0;left: 0;right: 0;top: 0;
+	}
+	.box{
+		position: absolute;bottom: -6px;left: 0;right: 0;
+		.btn{
+			width: 100%;margin-bottom: 6px;
+			font:16px/50px @yh;color: #000;text-align: center;
+			background: #fff;
+		}
+		.ttl{
+			font:14px/49px @yh;color: #777;text-align: center;
+			background: #fff;border-bottom: 1px solid #dedfe1;
+		}
+	}
+	#box2{
+		display: none;
 	}
 }
