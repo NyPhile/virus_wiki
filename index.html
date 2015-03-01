@@ -19,6 +19,10 @@
 </head>
 <body>
 <div class="body" id="body">
+	<div class="ad" data-role="page">
+		<a class="close" href="#virus_wrap" onclick="clearTimeout(ss)"></a>
+		<img src="css/res/ad.jpg" alt="">
+	</div>
 	<div class="virus_wrap" id="virus_wrap" data-role="page">
 		<div class="nav">
 			<a href="#search_wrap" class="search" data-transition="slide"></a>
@@ -267,6 +271,9 @@
 			}
 		}
 	};
+	var ss = setTimeout(function() {
+		window.location.href += '#virus_wrap';
+	},5000);
 	// var aLine = document.getElementsByClassName('line');
 	// for (var i = 0; i < aLine.length; i++) {
 	// 	aLine[i].onclick = function(){
