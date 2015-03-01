@@ -81,6 +81,9 @@ body * {
 .nav .back:hover {
   color: #fff;
 }
+.nav .back:visited {
+  color: #fff;
+}
 .nav .d_search {
   float: right;
   width: 44px;
